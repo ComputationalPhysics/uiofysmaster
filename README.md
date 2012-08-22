@@ -3,9 +3,9 @@ uiofysmaster
 
 LaTeX package that provides a front page and other snacks for master thesises at the Physics departement at the University of Oslo.
 
-The whole shebang goes into
+Just clone this project into
 
-    /home/yourusername/texmf/tex/latex/uiofysmaster
+    /home/yourusername/texmf/tex/latex/
 
 Then your LaTeX documents should accept the uiofysmaster package. An example document is shown below:
 
