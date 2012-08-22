@@ -10,7 +10,7 @@ The whole shebang goes into
 Then your LaTeX documents should accept the uiofysmaster package. An example document is shown below:
 
 ```latex
-\documentclass[twoside]{report}
+\documentclass[twoside,english]{uiofysmaster}
 \usepackage{uiofysmaster}
 \usepackage{biblatex}
 
@@ -26,19 +26,21 @@ Then your LaTeX documents should accept the uiofysmaster package. An example doc
 This is an abstract text.
 \end{abstract}
 
-\begin{center}
-To Someone\\\vspace{12pt}
-This is a dedication placeholder.
-\end{center}
+\begin{dedication}
+  To someone
+  \\\vspace{12pt}
+  This is a dedication to my cat.
+\end{dedication}
+
+\begin{acknowledgements}
+  I acknowledge my acknowledgements.
+\end{acknowledgements}
 
 \tableofcontents
 \clearpage
 \listoffigures
 \clearpage
 \listoftables
-
-\section{Acknowledgements}
-I want to thank my advisor for advising me.
 
 \chapter{The beginning is here}
 
