@@ -113,7 +113,7 @@
   \vspace{5mm}
   {\large \textsl {(\degreenameno)}}\\
   \vspace{10mm}
-  \centerline{\includegraphics[width=4cm,height=4cm]{uiologo}}
+  \centerline{\includegraphics[width=4cm,height=4cm]{figures/uiologo}}
   \vspace{5mm}
   % \textsl{Avdeling for mekanikk, Matematisk institutt} \\
   \textsl{\facultyname} \\
