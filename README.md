@@ -11,8 +11,9 @@ Then your LaTeX documents should accept the uiofysmaster package. An example doc
 
 ```latex
 \documentclass[twoside,english]{uiofysmaster}
-\usepackage{uiofysmaster}
 \usepackage{biblatex}
+
+%\bibliography{references}
 
 \author{Svenn-Arne Dragly}
 \title{\uppercase{The history of master thesises and other random gibberish}}
@@ -46,7 +47,7 @@ This is an abstract text.
 
 Start your chapter by writing something smart. Then go get coffee.
 
-\printbibliography
+%\printbibliography
 
 \end{document}
 ```
