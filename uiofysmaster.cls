@@ -44,6 +44,50 @@
 \newcommand*{\facultyno}[1]{\def\facultynameno{#1}}
 
 %----------------------------------------------------------------------------------------
+%       USEFUL PACKAGES
+%----------------------------------------------------------------------------------------
+
+% ---- Maths -------
+\usepackage{amsmath}
+\usepackage{amsthm}
+% ---- Links -------
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+%---------------------------------------
+%           USEFUL COMMANDS
+%---------------------------------------
+
+\newtheoremstyle{uiotheoremstyle} % name
+    {\topsep}                    % Space above
+    {\topsep}                    % Space below
+    {\itshape}                   % Body font
+    {}                           % Indent amount
+    {\scshape}                   % Theorem head font
+    {.}                          % Punctuation after theorem head
+    {.5em}                       % Space after theorem head
+    {}  % Theorem head spec (can be left empty, meaning ‘normal’)
+
+\theoremstyle{uiotheoremstyle}
+\newtheorem{theorem}{Theorem}
+\renewenvironment{proof}{\noindent{\scshape Proof}.}{\qed}
+\renewcommand{\vec}[1]{\mathbf{#1}}
+% BEGIN COMMANDS FROM LATEX FOR PHYSICISTS
+% http://www.dfcd.net/articles/latex/latex.html
+\newcommand{\ket}[1]{\left| #1 \right>} % for Dirac bras
+\newcommand{\bra}[1]{\left< #1 \right|} % for Dirac kets
+\newcommand{\braket}[2]{\left< #1 \vphantom{#2} \right|
+ \left. #2 \vphantom{#1} \right>} % for Dirac brackets
+% END COMMANDS FROM
+
+
+%----------------------------------------------------------------------------------------
 %       ABSTRACT PAGE DESIGN
 %----------------------------------------------------------------------------------------
 
@@ -123,7 +167,7 @@
   % \vspace{10mm}
   \large
   \textsl{\@date} \\
-  \vspace{5mm}
+  \vspace{4mm}
   \normalsize
   % \textsl{Mechanics Division, Department of Mathematics} \\
   \textsl{\facultynameno} \\
