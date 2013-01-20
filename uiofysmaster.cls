@@ -82,8 +82,38 @@
 % http://www.dfcd.net/articles/latex/latex.html
 \newcommand{\ket}[1]{\left| #1 \right>} % for Dirac bras
 \newcommand{\bra}[1]{\left< #1 \right|} % for Dirac kets
-\newcommand{\braket}[2]{\left< #1 \vphantom{#2} \right|
- \left. #2 \vphantom{#1} \right>} % for Dirac brackets
+
+% Added a braket command that takes either two or three arguments, so that \braket{a}{b} = <a|b> and \braket{a}{b}{c} = <a|b|c>
+\newcount\seccount
+
+\def\braket{%
+    \seccount0%
+    \let\go\secnext\go
+}
+
+\def\secnext#1{%
+    \def\last{\left\langle #1}%
+    \futurelet\next\secparse
+}
+
+\def\secparse{%
+    \ifx\next\bgroup
+                  \let\go\secparseii
+    \else
+    	\let\go\seclast
+    \fi
+    \go
+}
+
+\def\secparseii#1{%
+    \ifnum\seccount>0| \fi
+    \advance\seccount1\relax
+    \last
+    \def\last{#1}%
+    \futurelet\next\secparse
+}
+
+\def\seclast{ \ifnum\seccount>0{} | \fi\last \right\rangle}%
 % END COMMANDS FROM
 
 
