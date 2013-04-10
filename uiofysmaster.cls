@@ -30,6 +30,8 @@
 \ProcessOptions\relax
 \LoadClass{\baseclass}
 
+\input{packages.tex}
+
 \def\degreename{\uppercase{Master of Science}}
 \newcommand*{\degree}[1]{\def\degreename{#1}}
 \def\degreenameno{\uppercase{Master i Fysikk}}
@@ -42,23 +44,6 @@
 \newcommand*{\faculty}[1]{\def\facultyname{#1}}
 \def\facultynameno{Det matematisk- naturvitenskapelige fakultet}
 \newcommand*{\facultyno}[1]{\def\facultynameno{#1}}
-
-%----------------------------------------------------------------------------------------
-%       USEFUL PACKAGES
-%----------------------------------------------------------------------------------------
-
-% ---- Maths -------
-\usepackage{amsmath}
-\usepackage{amsthm}
-% ---- Links -------
-\usepackage{hyperref}
-\hypersetup{
-    colorlinks,
-    citecolor=black,
-    filecolor=black,
-    linkcolor=black,
-    urlcolor=black
-}
 
 %---------------------------------------
 %           USEFUL COMMANDS
@@ -175,3 +160,5 @@
 \end{center}
 \cleardoublepage
 }
+
+\input{listings}

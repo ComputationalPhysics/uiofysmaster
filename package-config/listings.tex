@@ -1,0 +1,36 @@
+\definecolor{stringcolor}{rgb}{0,0.67,0}
+\definecolor{keywordcolor}{rgb}{0,0,1}
+\definecolor{numbercolor}{rgb}{0.5,0,0}
+\definecolor{commentcolor}{rgb}{0.4,0.4,0.4}
+\definecolor{backgroundcolor}{rgb}{0.99,0.99,0.99}
+\definecolor{rulecolor}{rgb}{0.9,0.9,0.9}
+\newfontfamily\listingsfont[Scale=0.85]{Droid Sans Mono} 
+\lstset {
+  language=Python,
+  numbers=none,
+  breaklines=true,
+  tabsize=2,
+  basicstyle=\footnotesize\listingsfont,
+  keywordstyle=\color{blue}\footnotesize\listingsfont,
+  stringstyle=\color{stringcolor}\footnotesize\listingsfont,
+  commentstyle=\color{commentcolor}\footnotesize\listingsfont,
+  numberstyle=\color{numbercolor}\footnotesize\listingsfont,
+  identifierstyle=\footnotesize\listingsfont,
+  backgroundcolor=\color{backgroundcolor},
+  breakatwhitespace=true,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+%   numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=5pt,                   % how far the line-numbers are from the code
+  frame=lrtb,                    % adds a frame around the code
+  framexleftmargin=7pt,
+  framexrightmargin=7pt,
+  framextopmargin=7pt,
+  framexbottommargin=7pt,
+  xleftmargin=18pt,
+  xrightmargin=18pt,
+  rulecolor=\color{rulecolor},
+  tabsize=2,                       % sets default tabsize to 2 spaces
+  literate={å}{{\aa}}1 {æ}{{\ae}}1 {ø}{{\oslash}}1,
+  showstringspaces=false,
+  captionpos=b,
+}
