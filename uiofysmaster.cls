@@ -144,7 +144,9 @@
 \newenvironment{acknowledgements}
 {
   \thispagestyle{empty}
-  {\huge{\textbf{Acknowledgements}} \par}
+  \begin{center}
+    {\huge{\textbf{Acknowledgements}} \par}
+  \end{center}
 }
 {
   \vfil\vfil\vfil\null
@@ -223,4 +225,4 @@
 \pagenumbering{arabic}
 }
 
-\input{listings}
+% \input{listings}
