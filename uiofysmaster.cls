@@ -71,6 +71,12 @@
  \left. #2 \vphantom{#1} \right>} % for Dirac brackets
 % END COMMANDS FROM
 
+% Page style commands
+\let\origdoublepage\cleardoublepage
+\newcommand{\clearemptydoublepage}{%
+  \clearpage
+  {\pagestyle{empty}\origdoublepage}%
+}
 
 %----------------------------------------------------------------------------------------
 %       ABSTRACT PAGE DESIGN
@@ -85,7 +91,8 @@
 }
 {
   \vfil\vfil\vfil\null
-  \cleardoublepage
+  \thispagestyle{empty}
+  \clearemptydoublepage
 }
 %----------------------------------------------------------------------------------------
 %       DEDICATION PAGE DESIGN
@@ -98,7 +105,7 @@
 {
   \end{center}
   \vfil\vfil\vfil\null
-  \cleardoublepage
+  \clearemptydoublepage
 }
 %----------------------------------------------------------------------------------------
 %       ABSTRACT PAGE DESIGN
@@ -111,7 +118,7 @@
 }
 {
   \vfil\vfil\vfil\null
-  \cleardoublepage
+  \clearemptydoublepage
 }
 
 %----------------------------------------------------------------------------------------
@@ -119,6 +126,7 @@
 %----------------------------------------------------------------------------------------
 \RequirePackage{graphicx}
 \renewcommand{\maketitle}{
+\pagenumbering{roman}
 \thispagestyle{empty}
 \begin{center}        % Sentrerer teksten
   % Tittel
@@ -134,31 +142,49 @@
   \textbf{\@author} \\
   \vspace{25mm}
   \Large
-  {\bf{\textsl{THESIS}}} \\
-  \textsl{for the degree of} \\
+%   {\bf{\textsl{THESIS}}} \\
+  {\bf{THESIS}} \\
+%   \textsl{for the degree of} \\
+  for the degree of \\
   \vspace{2mm}
   
-  {\bf{\textsl{\degreename}}} \\
-  \vspace{5mm}
-  {\large \textsl {(\degreenameno)}}\\
-  \vspace{10mm}
-  \centerline{\includegraphics[width=4cm,height=4cm]{figures/uiologo}}
-  \vspace{5mm}
+%   {\bf{\textsl{\degreename}}} \\
+  {\bf{\degreename}} \\
+  \vspace{15mm}
+%   {\large \textsl {(\degreenameno)}}\\
+%   \vspace{5m}
+  \centerline{\includegraphics[width=5cm,height=5cm]{figures/apollonseglet/Apollonseglet/UiO_Segl_cmyk.eps}}
+  \vspace{15mm}
   % \textsl{Avdeling for mekanikk, Matematisk institutt} \\
-  \textsl{\facultyname} \\
-  \textsl{\universityname} \\
+%   \textsl{\facultyname} \\
+  \large
+  \facultyname \\
+%   \textsl{\universityname} \\
+  \universityname \\
   % Maaned, aar
   \vspace{5mm}
   % \vspace{10mm}
-  \large
-  \textsl{\@date} \\
+  \normalsize
+%   \textsl{\@date} \\
+  \@date \\
   \vspace{4mm}
   \normalsize
   % \textsl{Mechanics Division, Department of Mathematics} \\
-  \textsl{\facultynameno} \\
-  \textsl{\universitynameno} \\
+%   \textsl{\facultynameno} \\
+%   \textsl{\universitynameno} \\
 \end{center}
-\cleardoublepage
+\clearemptydoublepage
+}
+
+\let\oldtableofcontents\tableofcontents
+\renewcommand{\tableofcontents}{
+{
+  \pagestyle{tableofcontents}
+%   \thispagestyle{onlypagenum}
+  \oldtableofcontents
+  \clearpage
+}
+\pagenumbering{arabic}
 }
 
 \input{listings}
