@@ -154,6 +154,8 @@
 %----------------------------------------------------------------------------------------
 %       FRONT PAGE DESIGN
 %----------------------------------------------------------------------------------------
+
+\RequirePackage{iftex}
 \RequirePackage{graphicx}
 \renewcommand{\maketitle}{
 \pagenumbering{roman}
@@ -183,7 +185,11 @@
   \vspace{15mm}
 %   {\large \textsl {(\degreenameno)}}\\
 %   \vspace{5m}
-  \centerline{\includegraphics[width=5cm,height=5cm]{figures/apollonseglet/Apollonseglet/UiO_Segl_cmyk.eps}}
+  \ifXeTeX
+    \centerline{\includegraphics[width=5cm,height=5cm]{figures/apollonseglet/Apollonseglet/UiO_Segl_cmyk.eps}}
+  \else
+    \centerline{\includegraphics[width=5cm,height=5cm]{figures/apollonseglet/Apollonseglet/UiO_Segl_cmyk.pdf}}
+  \fi
   \vspace{15mm}
   % \textsl{Avdeling for mekanikk, Matematisk institutt} \\
 %   \textsl{\facultyname} \\
