@@ -29,26 +29,10 @@
   literate={å}{{\aa}}1 {æ}{{\ae}}1 {ø}{{\oslash}}1,
   showstringspaces=false,
   captionpos=b,
+  basicstyle=\footnotesize\sffamily,
+  keywordstyle=\color{blue}\footnotesize\sffamily,
+  stringstyle=\color{stringcolor}\footnotesize\sffamily,
+  commentstyle=\color{commentcolor}\footnotesize\sffamily,
+  numberstyle=\color{numbercolor}\footnotesize\sffamily,
+  identifierstyle=\footnotesize\sffamily,
 }
-
-\ifXeTeX
-  \RequirePackage{fontspec}
-  \newfontfamily\listingsfont[Scale=0.85]{Droid Sans Mono}
-  \lstset {
-    basicstyle=\footnotesize\listingsfont,
-    keywordstyle=\color{blue}\footnotesize\listingsfont,
-    stringstyle=\color{stringcolor}\footnotesize\listingsfont,
-    commentstyle=\color{commentcolor}\footnotesize\listingsfont,
-    numberstyle=\color{numbercolor}\footnotesize\listingsfont,
-    identifierstyle=\footnotesize\listingsfont,
-  }
-\else
-  \lstset {
-    basicstyle=\footnotesize\sffamily,
-    keywordstyle=\color{blue}\footnotesize,
-    stringstyle=\color{stringcolor}\footnotesize,
-    commentstyle=\color{commentcolor}\footnotesize,
-    numberstyle=\color{numbercolor}\footnotesize,
-    identifierstyle=\footnotesize,
-  }
-\fi
