@@ -92,3 +92,30 @@ Now, in your master-thesis.tex file, replace \maketitle with the following:
 ```
 
 This will load the PDF file front-page.pdf and use it as the front page instead.
+
+Adding a better font for your listings environment
+--------------------------------------------------
+
+While we have at least added a few improvements to the default setup of the listings environment already (such as frame and background), you might want to add an even prettier font, such as Droid Sans Mono. 
+If you are using Ubuntu you will need to install the package fonts-droid first:
+```bash
+sudo apt-get install fonts-droid
+```
+We wanted to include this automatically in the package, but due to some initial troubles with the inclusion of an external font, we dropped it. If you should want it, however, just add this to the preamble (before \begin{document}) of your master-thesis.tex:
+
+```latex
+...
+\usepackage{fontspec}
+\newfontfamily\listingsfont[Scale=0.85]{Droid Sans Mono}
+\lstset {
+    basicstyle=\footnotesize\listingsfont,
+    keywordstyle=\color{keywordcolor}\footnotesize\listingsfont,
+    stringstyle=\color{stringcolor}\footnotesize\listingsfont,
+    commentstyle=\color{commentcolor}\footnotesize\listingsfont,
+    numberstyle=\color{numbercolor}\footnotesize\listingsfont,
+    identifierstyle=\footnotesize\listingsfont,
+}
+...
+```
+This will set the font to Droid Sans Mono while keeping the default color settings that we've set up in the package.
+
