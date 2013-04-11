@@ -15,7 +15,6 @@ Then your LaTeX documents should accept the uiofysmaster package. An example doc
 master-thesis.tex:
 ```latex
 \documentclass[twoside,english]{uiofysmaster}
-\usepackage{biblatex}
 
 %\bibliography{references}
 
@@ -50,8 +49,6 @@ This is an abstract text.
 \chapter{The beginning is here}
 
 Start your chapter by writing something smart. Then go get coffee.
-
-%\printbibliography
 
 \end{document}
 ```
