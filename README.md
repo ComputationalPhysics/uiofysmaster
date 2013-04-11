@@ -67,8 +67,8 @@ front-page.tex:
             marginparsep=0cm,marginparwidth=0cm,top=3cm]{geometry}
 
 \author{Svenn-Arne Dragly}
-\title{\uppercase{Novel potentials for molecular dynamics from quantum Monte Carlo}}
-\date{June 2014}
+\title{\uppercase{The history of master thesises and other random gibberish}}
+\date{June 2012}
 
 \begin{document}
 
