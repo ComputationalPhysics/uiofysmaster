@@ -1,9 +1,11 @@
-\definecolor{stringcolor}{rgb}{0,0.67,0}
-\definecolor{keywordcolor}{rgb}{0,0,1}
-\definecolor{numbercolor}{rgb}{0.5,0,0}
-\definecolor{commentcolor}{rgb}{0.4,0.4,0.4}
-\definecolor{backgroundcolor}{rgb}{0.99,0.99,0.99}
-\definecolor{rulecolor}{rgb}{0.9,0.9,0.9}
+\definecolor{listingsstringcolor}{rgb}{0,0.5,0}
+\definecolor{listingskeywordcolor}{rgb}{0.5,0.5,0.0}
+% \definecolor{listingskeywordcolor}{rgb}{0.0,0.0,0.7}
+\definecolor{listingsnumbercolor}{rgb}{0.5,0,0}
+\definecolor{listingscommentcolor}{rgb}{0.4,0.4,0.4}
+\definecolor{listingsbackgroundcolor}{rgb}{0.975,0.975,0.975}
+\definecolor{listingsrulecolor}{rgb}{0.86,0.86,0.86}
+\definecolor{listingsidentifiercolor}{rgb}{0.0,0.0,0.0}
 
 \RequirePackage{iftex}
 
@@ -12,7 +14,7 @@
     numbers=none,
     breaklines=true,
     tabsize=2,
-    backgroundcolor=\color{backgroundcolor},
+    backgroundcolor=\color{listingsbackgroundcolor},
     breakatwhitespace=true,         % sets if automatic breaks should only happen at whitespace
     breaklines=true,                 % sets automatic line breaking
   %   numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
@@ -24,15 +26,42 @@
     framexbottommargin=7pt,
     xleftmargin=18pt,
     xrightmargin=18pt,
-    rulecolor=\color{rulecolor},
+    rulecolor=\color{listingsrulecolor},
     tabsize=2,                       % sets default tabsize to 2 spaces
     literate={å}{{\aa}}1 {æ}{{\ae}}1 {ø}{{\oslash}}1,
     showstringspaces=false,
     captionpos=b,
     basicstyle=\footnotesize\sffamily,
-    keywordstyle=\color{keywordcolor}\footnotesize\sffamily,
-    stringstyle=\color{stringcolor}\footnotesize\sffamily,
-    commentstyle=\color{commentcolor}\footnotesize\sffamily,
-    numberstyle=\color{numbercolor}\footnotesize\sffamily,
+    keywordstyle=\color{listingskeywordcolor}\footnotesize\sffamily,
+    stringstyle=\color{listingsstringcolor}\footnotesize\sffamily,
+    commentstyle=\color{listingscommentcolor}\footnotesize\sffamily,
+    numberstyle=\color{listingsnumbercolor}\footnotesize\sffamily,
     identifierstyle=\footnotesize\sffamily,
 }
+
+\usepackage{calc}
+
+%Define a reference depth. 
+%You can choose either relative or absolute.
+%--------------------------
+\newlength{\DepthReference}
+% \settodepth{\DepthReference}{g}%relative to a depth of a letter.
+\setlength{\DepthReference}{0pt}%absolute value.
+
+%Define a reference Height. 
+%You can choose either relative or absolute.
+%--------------------------
+\newlength{\HeightReference}
+% \settoheight{\HeightReference}{T}
+\setlength{\HeightReference}{7pt}
+
+\newlength{\Width}%
+\newcommand{\lstinlinebox}[1]{%
+  \settowidth{\Width}{\lstinline|#1|}%
+  \fcolorbox{listingsrulecolor}{listingsbackgroundcolor}{%
+    \raisebox{-\DepthReference}%
+    {%
+          \parbox[b][\HeightReference+\DepthReference][c]{\Width}{\centering \lstinline|#1|}%
+    }%
+  }%
+}%

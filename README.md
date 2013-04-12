@@ -109,10 +109,10 @@ We wanted to include this automatically in the package, but due to some initial 
 \newfontfamily\listingsfont[Scale=0.85]{Droid Sans Mono}
 \lstset {
     basicstyle=\footnotesize\listingsfont,
-    keywordstyle=\color{keywordcolor}\footnotesize\listingsfont,
-    stringstyle=\color{stringcolor}\footnotesize\listingsfont,
-    commentstyle=\color{commentcolor}\footnotesize\listingsfont,
-    numberstyle=\color{numbercolor}\footnotesize\listingsfont,
+    keywordstyle=\color{listingskeywordcolor}\footnotesize\listingsfont,
+    stringstyle=\color{listingsstringcolor}\footnotesize\listingsfont,
+    commentstyle=\color{listingscommentcolor}\footnotesize\listingsfont,
+    numberstyle=\color{listingsnumbercolor}\footnotesize\listingsfont,
     identifierstyle=\footnotesize\listingsfont,
 }
 ...
