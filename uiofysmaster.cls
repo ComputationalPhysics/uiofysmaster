@@ -32,9 +32,9 @@
 
 \input{packages.tex}
 
-\def\degreename{\uppercase{Master of Science}}
+\def\degreename{Master of Science}
 \newcommand*{\degree}[1]{\def\degreename{#1}}
-\def\degreenameno{\uppercase{Master i Fysikk}}
+\def\degreenameno{Master i Fysikk}
 \newcommand*{\degreeno}[1]{\def\degreenameno{#1}}
 \def\universityname{University of Oslo}
 \newcommand*{\university}[1]{\def\universityname{#1}}
@@ -164,26 +164,26 @@
 \thispagestyle{empty}
 \begin{center}        % Sentrerer teksten
   % Tittel
-  \vspace{5mm}          % Vertikalt mellomrom
+  \vspace{15mm}          % Vertikalt mellomrom
   \LARGE
-  \textbf{\@title} \\
+  \textsc{\@title} \\
   \Large
   \vspace{5mm}
-  \textbf{by} \\
+  {\small by} \\
   \vspace{5mm}
   % Forfatter
   \large
-  \textbf{\@author} \\
-  \vspace{25mm}
+  \textsc{\@author} \\
+  \vspace{45mm}
   \Large
 %   {\bf{\textsl{THESIS}}} \\
-  {\bf{THESIS}} \\
+  {\textsc{Thesis}} \\
 %   \textsl{for the degree of} \\
-  for the degree of \\
+  {\small for the degree of} \\
   \vspace{2mm}
   
 %   {\bf{\textsl{\degreename}}} \\
-  {\bf{\degreename}} \\
+  {\textsc{\degreename}} \\
   \vspace{15mm}
 %   {\large \textsl {(\degreenameno)}}\\
 %   \vspace{5m}
