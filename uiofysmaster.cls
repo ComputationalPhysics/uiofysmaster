@@ -167,13 +167,13 @@
   \vspace{15mm}          % Vertikalt mellomrom
   \LARGE
   \textsc{\@title} \\
-  \Large
-  \vspace{5mm}
-  {\small by} \\
+  \small
+  \vspace{10mm}
+  {by} \\
   \vspace{5mm}
   % Forfatter
   \large
-  \textsc{\@author} \\
+  {\@author} \\
   \vspace{45mm}
   \Large
 %   {\bf{\textsl{THESIS}}} \\
