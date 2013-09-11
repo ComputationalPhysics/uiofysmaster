@@ -164,7 +164,8 @@
 \thispagestyle{empty}
 \begin{center}        % Sentrerer teksten
   % Tittel
-  \vspace{15mm}          % Vertikalt mellomrom
+  \ \\
+  \vspace{10mm}          % Vertikalt mellomrom
   \LARGE
   \textsc{\@title} \\
   \small
@@ -174,7 +175,7 @@
   % Forfatter
   \large
   {\@author} \\
-  \vspace{45mm}
+  \vspace{25mm}
   \Large
 %   {\bf{\textsl{THESIS}}} \\
   {\textsc{Thesis}} \\
