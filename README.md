@@ -10,7 +10,7 @@ Just clone this project into
 
     /home/yourusername/texmf/tex/latex/
 
-Then your LaTeX documents should accept the uiofysmaster package. An example document is shown below:
+If the folder does not exist, you need to create it first. Now your LaTeX documents should accept the uiofysmaster package. An example document is shown below:
 
 master-thesis.tex:
 ```latex
@@ -19,7 +19,7 @@ master-thesis.tex:
 %\bibliography{references}
 
 \author{Svenn-Arne Dragly}
-\title{\uppercase{The history of master thesises and other random gibberish}}
+\title{The history of master thesises and other random gibberish}
 \date{June 2012}
 
 \begin{document}
@@ -41,10 +41,6 @@ This is an abstract text.
 \end{acknowledgements}
 
 \tableofcontents
-\clearpage
-\listoffigures
-\clearpage
-\listoftables
 
 \chapter{The beginning is here}
 
