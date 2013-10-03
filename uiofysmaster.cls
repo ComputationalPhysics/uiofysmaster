@@ -215,9 +215,14 @@
 \clearemptydoublepage
 }
 
+\makeatletter
+\def\pagenumberingnoreset#1{%
+  \gdef\thepage{\csname @#1\endcsname \c@page}}
+\makeatother
 \let\oldtableofcontents\tableofcontents
 \renewcommand{\tableofcontents}{
 {
+  \pagenumberingnoreset{roman}
   \pagestyle{tableofcontents}
 %   \thispagestyle{onlypagenum}
   \oldtableofcontents
