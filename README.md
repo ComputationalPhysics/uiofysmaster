@@ -74,7 +74,7 @@ front-page.tex:
 
 The generated PDF you get when compiling this will now center the front page correctly.
 
-Now, in your master-thesis.tex file, replace \maketitle with the following:
+Now, in your master-thesis.tex file, replace `\maketitle` with the following:
 
 
 ```latex
@@ -89,6 +89,21 @@ Now, in your master-thesis.tex file, replace \maketitle with the following:
 
 This will load the PDF file front-page.pdf and use it as the front page instead.
 
+Using pdfpages to include a separate front-page PDF makes the page numbering of the first pages (the ones before the first chapter, that should be numbered i, ii, etc.) break. This can be fixed by for example including `\pagenumbering{roman}` before the `\includepdf{}`-command, as follows:
+
+```latex
+...
+\usepackage{pdfpages}
+...
+\begin{document}
+\pagenumbering{roman}
+\includepdf{front-page.pdf}
+\cleardoublepage
+...
+```
+
+The numbering is automatically set to `\pagenumbering{arabic}` after the table of contents.
+
 Adding a better font for your listings environment
 --------------------------------------------------
 
@@ -97,7 +112,7 @@ If you are using Ubuntu you will need to install the package fonts-droid first:
 ```bash
 sudo apt-get install fonts-droid
 ```
-We wanted to include this automatically in the package, but due to some initial troubles with the inclusion of an external font, we dropped it. If you should want it, however, just add this to the preamble (before \begin{document}) of your master-thesis.tex:
+We wanted to include this automatically in the package, but due to some initial troubles with the inclusion of an external font, we dropped it. If you should want it, however, just add this to the preamble (before `\begin{document}`) of your master-thesis.tex:
 
 ```latex
 ...
@@ -114,4 +129,3 @@ We wanted to include this automatically in the package, but due to some initial 
 ...
 ```
 This will set the font to Droid Sans Mono while keeping the default color settings that we've set up in the package.
-
