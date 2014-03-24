@@ -134,6 +134,5 @@ We wanted to include this automatically in the package, but because it there is 
   \newcommand{\listingsfont}{}
 \fi
 ...
-...
 ```
 This will set the font to Droid Sans Mono while keeping the default color settings that we've set up in the package.
