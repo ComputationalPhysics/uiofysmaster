@@ -107,25 +107,33 @@ The numbering is automatically set to `\pagenumbering{arabic}` after the table o
 Adding a better font for your listings environment
 --------------------------------------------------
 
+Having a prettier font requires you to compile your document with XeLaTeX.
+
 While we have at least added a few improvements to the default setup of the listings environment already (such as frame and background), you might want to add an even prettier font, such as Droid Sans Mono. 
 If you are using Ubuntu you will need to install the package fonts-droid first:
 ```bash
 sudo apt-get install fonts-droid
 ```
-We wanted to include this automatically in the package, but due to some initial troubles with the inclusion of an external font, we dropped it. If you should want it, however, just add this to the preamble (before `\begin{document}`) of your master-thesis.tex:
+We wanted to include this automatically in the package, but because it there is no simple way to include an external font without having it installed on your system from before, we dropped it. If you should want it, however, just add this to the preamble (before `\begin{document}`) of your master-thesis.tex:
 
 ```latex
 ...
-\usepackage{fontspec}
-\newfontfamily\listingsfont[Scale=0.85]{Droid Sans Mono}
-\lstset {
-    basicstyle=\footnotesize\listingsfont,
+\usepackage{ifxetex}
+\ifxetex
+  \usepackage{fontspec}
+  \newfontfamily\listingsfont[Scale=0.85]{Droid Sans Mono}
+  \lstset {
+    basicstyle=\color{listingsbasiccolor}\footnotesize\listingsfont,
     keywordstyle=\color{listingskeywordcolor}\footnotesize\listingsfont,
     stringstyle=\color{listingsstringcolor}\footnotesize\listingsfont,
     commentstyle=\color{listingscommentcolor}\footnotesize\listingsfont,
     numberstyle=\color{listingsnumbercolor}\footnotesize\listingsfont,
-    identifierstyle=\footnotesize\listingsfont,
-}
+    identifierstyle=\color{listingsidentifiercolor}\footnotesize\listingsfont,
+  }
+\else
+  \newcommand{\listingsfont}{}
+\fi
+...
 ...
 ```
 This will set the font to Droid Sans Mono while keeping the default color settings that we've set up in the package.
