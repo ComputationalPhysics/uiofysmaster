@@ -98,10 +98,11 @@
 {
   \end{center}
   \vfil\vfil\vfil\null
+  \thispagestyle{empty}
   \clearemptydoublepage
 }
 %----------------------------------------------------------------------------------------
-%       ABSTRACT PAGE DESIGN
+%       ACKNOWLEDGEMENTS PAGE DESIGN
 %----------------------------------------------------------------------------------------
 
 \newenvironment{acknowledgements}
@@ -113,6 +114,7 @@
 }
 {
   \vfil\vfil\vfil\null
+  \thispagestyle{empty}
   \clearemptydoublepage
 }
 
