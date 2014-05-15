@@ -56,8 +56,8 @@ By default, the maketitle command will generate the front page, but it will not 
 front-page.tex:
 ```latex
 \documentclass[twoside,english]{uiofysmaster}
-\usepackage[a4paper,includeall,bindingoffset=0cm,margin=3cm,
-            marginparsep=0cm,marginparwidth=0cm,top=3cm]{geometry}
+\geometry{a4paper,includeall,bindingoffset=0cm,margin=3cm,
+            marginparsep=0cm,marginparwidth=0cm,top=2cm}
 
 \author{Svenn-Arne Dragly}
 \title{\uppercase{The history of master thesises and other random gibberish}}
