@@ -6,13 +6,15 @@
 \definecolor{listingscommentcolor}{rgb}{0.4,0.4,0.4}
 \definecolor{listingsbackgroundcolor}{rgb}{0.975,0.975,0.975}
 \definecolor{listingsrulecolor}{rgb}{0.86,0.86,0.86}
-\definecolor{listingsidentifiercolor}{rgb}{0.5,0.0,0.5}
+\definecolor{listingsidentifiercolor}{rgb}{0.0,0.0,0.0}
+\definecolor{listingsclasscolor}{rgb}{0.5,0.0,0.5}
+\definecolor{listingsmembercolor}{rgb}{0.5,0.0,0.0}
 % \definecolor{listingsvariablecolor}{rgb}{0.5,0.0,0.5}
 
 \RequirePackage{iftex}
 
 \lstset {
-    language=Python,
+    language=c++,
     numbers=none,
     breaklines=true,
     tabsize=2,
@@ -39,7 +41,12 @@
     commentstyle=\color{listingscommentcolor}\footnotesize\sffamily,
     numberstyle=\color{listingsnumbercolor}\footnotesize\sffamily,
     identifierstyle=\color{listingsidentifiercolor}\footnotesize\sffamily,
+    keywordstyle=[2]{\color{listingsclasscolor}\footnotesize\listingsfont},
+    keywordstyle=[3]{\color{listingsmembercolor}\footnotesize\listingsfont},
 }
+
+\input{package-config/listings-qt.tex}
+
 % \lstset{
 %     literate={0}{{\textcolor{listingsnumbercolor}{0}}}{1}%
 %              {1}{{\textcolor{listingsnumbercolor}{1}}}{1}%
