@@ -1,0 +1,61 @@
+\RequirePackage{listings}
+
+\definecolor{listingsstringcolor}{rgb}{0,0.5,0}
+\definecolor{listingskeywordcolor}{rgb}{0.5,0.5,0.0}
+\definecolor{listingsbasiccolor}{rgb}{0.0,0.0,0.0}
+\definecolor{listingsnumbercolor}{rgb}{0.0,0.0,1.0}
+\definecolor{listingscommentcolor}{rgb}{0.4,0.4,0.4}
+\definecolor{listingsbackgroundcolor}{rgb}{0.975,0.975,0.975}
+\definecolor{listingsrulecolor}{rgb}{0.86,0.86,0.86}
+\definecolor{listingsidentifiercolor}{rgb}{0.5,0.0,0.5}
+
+\lstset {
+    language=Python,
+    numbers=none,
+    breaklines=true,
+    tabsize=2,
+    backgroundcolor=\color{listingsbackgroundcolor},
+    breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+    breaklines=true,                 % sets automatic line breaking
+  %   numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+    numbersep=5pt,                   % how far the line-numbers are from the code
+    frame=lrtb,                    % adds a frame around the code
+    framexleftmargin=7pt,
+    framexrightmargin=7pt,
+    framextopmargin=7pt,
+    framexbottommargin=7pt,
+    xleftmargin=18pt,
+    xrightmargin=18pt,
+    rulecolor=\color{listingsrulecolor},
+    tabsize=2,                       % sets default tabsize to 2 spaces
+    literate={å}{{\aa}}1 {æ}{{\ae}}1 {ø}{{\oslash}}1,
+    showstringspaces=false,
+    captionpos=b,
+    basicstyle=\color{listingsbasiccolor}\footnotesize\sffamily,
+    keywordstyle=\color{listingskeywordcolor}\footnotesize\sffamily,
+    stringstyle=\color{listingsstringcolor}\footnotesize\sffamily,
+    commentstyle=\color{listingscommentcolor}\footnotesize\sffamily,
+    numberstyle=\color{listingsnumbercolor}\footnotesize\sffamily,
+    identifierstyle=\color{listingsidentifiercolor}\footnotesize\sffamily,
+}
+\lstset{literate=%
+   *{0}{{{\color{listingsnumbercolor}0}}}1
+    {1}{{{\color{listingsnumbercolor}1}}}1
+    {2}{{{\color{listingsnumbercolor}2}}}1
+    {3}{{{\color{listingsnumbercolor}3}}}1
+    {4}{{{\color{listingsnumbercolor}4}}}1
+    {5}{{{\color{listingsnumbercolor}5}}}1
+    {6}{{{\color{listingsnumbercolor}6}}}1
+    {7}{{{\color{listingsnumbercolor}7}}}1
+    {8}{{{\color{listingsnumbercolor}8}}}1
+    {9}{{{\color{listingsnumbercolor}9}}}1
+}
+\newfontfamily\listingsfont[Scale=0.85]{Droid Sans Mono}
+\lstset {
+    basicstyle=\color{listingsbasiccolor}\footnotesize\listingsfont,
+    keywordstyle=\color{listingskeywordcolor}\footnotesize\listingsfont,
+    stringstyle=\color{listingsstringcolor}\footnotesize\listingsfont,
+    commentstyle=\color{listingscommentcolor}\footnotesize\listingsfont,
+    numberstyle=\color{listingsnumbercolor}\footnotesize\listingsfont,
+    identifierstyle=\color{listingsidentifiercolor}\footnotesize\listingsfont,
+}
