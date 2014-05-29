@@ -15,11 +15,11 @@
 \RequirePackage{iftex}
 
 % Make sure minus doesn't convert to hyphen
-\makeatletter
-\lst@CCPutMacro\lst@ProcessOther {"2D}{\lst@ttfamily{-{}}{-{}}}
-\@empty\z@\@empty
-\makeatother
-% End minus hyphen conversion fix
+%\makeatletter
+%\lst@CCPutMacro\lst@ProcessOther {"2D}{\lst@ttfamily{-{}}{-{}}}
+%\@empty\z@\@empty
+%\makeatother
+%% End minus hyphen conversion fix
 \newcommand{\listingsfont}{\sffamily}
 \lstset {
     language=c++,
@@ -40,7 +40,7 @@
     xrightmargin=18pt,
     rulecolor=\color{listingsrulecolor},
     tabsize=2,                       % sets default tabsize to 2 spaces
-    literate={å}{{\aa}}1 {æ}{{\ae}}1 {ø}{{\oslash}}1,
+    literate={-}{{\textendash}}1 {å}{{\aa}}1 {æ}{{\ae}}1 {ø}{{\oslash}}1,
     showstringspaces=false,
     captionpos=b,
     basicstyle=\color{listingsbasiccolor}\footnotesize\listingsfont,
@@ -54,7 +54,6 @@
     keywordstyle=[3]{\color{listingsmembercolor}\footnotesize\listingsfont},
     keywordstyle=[4]{\color{listingsdirectivecolor}\footnotesize\listingsfont},
 }
-
 \input{package-config/listings-qmake.tex}
 \input{package-config/listings-glsl.tex}
 \input{package-config/listings-std.tex}
