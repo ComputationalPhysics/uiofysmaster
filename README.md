@@ -121,17 +121,8 @@ We wanted to include this automatically in the package, but because it there is 
 \usepackage{ifxetex}
 \ifxetex
   \usepackage{fontspec}
-  \newfontfamily\listingsfont[Scale=0.85]{Droid Sans Mono}
-  \lstset {
-    basicstyle=\color{listingsbasiccolor}\footnotesize\listingsfont,
-    keywordstyle=\color{listingskeywordcolor}\footnotesize\listingsfont,
-    stringstyle=\color{listingsstringcolor}\footnotesize\listingsfont,
-    commentstyle=\color{listingscommentcolor}\footnotesize\listingsfont,
-    numberstyle=\color{listingsnumbercolor}\footnotesize\listingsfont,
-    identifierstyle=\color{listingsidentifiercolor}\footnotesize\listingsfont,
-  }
-\else
-  \newcommand{\listingsfont}{}
+  \newfontfamily\listingsfontfamily[Scale=0.85]{Droid Sans Mono}
+  \renewcommand{\listingsfont}{\listingsfontfamily}
 \fi
 ...
 ```
