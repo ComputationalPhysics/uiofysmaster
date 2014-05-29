@@ -9,10 +9,18 @@
 \definecolor{listingsidentifiercolor}{rgb}{0.0,0.0,0.0}
 \definecolor{listingsclasscolor}{rgb}{0.5,0.0,0.5}
 \definecolor{listingsmembercolor}{rgb}{0.5,0.0,0.0}
+\definecolor{listingsincludecolor}{rgb}{0.0,0.0,0.5}
 % \definecolor{listingsvariablecolor}{rgb}{0.5,0.0,0.5}
 
 \RequirePackage{iftex}
 
+% Make sure minus doesn't convert to hyphen
+\makeatletter
+\lst@CCPutMacro\lst@ProcessOther {"2D}{\lst@ttfamily{-{}}{-{}}}
+\@empty\z@\@empty
+\makeatother
+% End minus hyphen conversion fix
+\newcommand{\listingsfont}{\sffamily}
 \lstset {
     language=c++,
     numbers=none,
@@ -35,14 +43,15 @@
     literate={å}{{\aa}}1 {æ}{{\ae}}1 {ø}{{\oslash}}1,
     showstringspaces=false,
     captionpos=b,
-    basicstyle=\color{listingsbasiccolor}\footnotesize\sffamily,
-    keywordstyle=\color{listingskeywordcolor}\footnotesize\sffamily,
-    stringstyle=\color{listingsstringcolor}\footnotesize\sffamily,
-    commentstyle=\color{listingscommentcolor}\footnotesize\sffamily,
-    numberstyle=\color{listingsnumbercolor}\footnotesize\sffamily,
-    identifierstyle=\color{listingsidentifiercolor}\footnotesize\sffamily,
+    basicstyle=\color{listingsbasiccolor}\footnotesize\listingsfont,
+    keywordstyle=\color{listingskeywordcolor}\footnotesize\listingsfont,
+    stringstyle=\color{listingsstringcolor}\footnotesize\listingsfont,
+    commentstyle=\color{listingscommentcolor}\footnotesize\listingsfont,
+    numberstyle=\color{listingsnumbercolor}\footnotesize\listingsfont,
+    identifierstyle=\color{listingsidentifiercolor}\footnotesize\listingsfont,
     keywordstyle=[2]{\color{listingsclasscolor}\footnotesize\listingsfont},
     keywordstyle=[3]{\color{listingsmembercolor}\footnotesize\listingsfont},
+    keywordstyle=[4]{\color{listingsincludecolor}\footnotesize\listingsfont},
 }
 
 \input{package-config/listings-qmake.tex}
