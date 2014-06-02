@@ -191,7 +191,7 @@
   \pagestyle{tableofcontents}
 %   \thispagestyle{onlypagenum}
   \oldtableofcontents
-  \clearpage
+  \cleardoublepage
 }
 \pagenumbering{arabic}
 }
