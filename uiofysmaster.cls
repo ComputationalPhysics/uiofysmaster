@@ -125,6 +125,7 @@
 \RequirePackage{iftex}
 \RequirePackage{graphicx}
 \renewcommand{\maketitle}{
+\newgeometry{margin=3cm}
 \pagenumbering{roman}
 \thispagestyle{empty}
 \begin{center}        % Sentrerer teksten
@@ -178,6 +179,7 @@
 %   \textsl{\universitynameno} \\
 \end{center}
 \clearemptydoublepage
+\restoregeometry
 }
 
 \makeatletter
