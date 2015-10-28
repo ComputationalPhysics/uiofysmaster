@@ -127,3 +127,16 @@ We wanted to include this automatically in the package, but because it there is 
 ...
 ```
 This will set the font to Droid Sans Mono while keeping the default color settings that we've set up in the package.
+
+A short note about references
+-----------------------------
+
+**Equations** 
+The command *\eqref{}* works exactly like *\ref{}*, but it adds parantheses to a plain number.
+
+**Figures and tables**
+*\autoref{}* is a usefull command when refering to to figures and tables. The command creates a reference with additional text
+corresponding to the target's type. For example, the command *\autoref{fig:myfigure}* would create a hyperlink to the 
+*\label{fig:myfigure}* command, wherever it is. Assuming that this label is pointing to a figure, the hyperlink would
+contain the text "Figure 1.1", or similar.
+
