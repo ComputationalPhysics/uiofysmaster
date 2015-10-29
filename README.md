@@ -147,7 +147,7 @@ A few tips
 
 * Add some more space around equations
 
-   These short latex commands after `\begin{document}` will do the task:
+   These short latex commands after `latex \begin{document}` will do the task:
    ```latex
    % set space around equations
    \setlength{\belowdisplayskip}{12pt} \setlength{\belowdisplayshortskip}{12pt}
