@@ -149,10 +149,8 @@ A few tips
 
    These short latex commands after *\begin{document}* will do the task:
    ```latex
-   ...
    % set space around equations
    \setlength{\belowdisplayskip}{12pt} \setlength{\belowdisplayshortskip}{12pt}
    \setlength{\abovedisplayskip}{12pt} \setlength{\abovedisplayshortskip}{12pt}
-   ...
    ```
 
