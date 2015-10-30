@@ -41,6 +41,10 @@ This is an abstract text.
 \end{acknowledgements}
 
 \tableofcontents
+\listoffigures
+\addcontentsline{toc}{chapter}{\listfigurename} % add List of Figures to Contents 
+\listoftables
+\addcontentsline{toc}{chapter}{\listtablename} % add List of Tables to Contents
 
 \chapter{The beginning is here}
 
