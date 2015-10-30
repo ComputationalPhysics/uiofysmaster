@@ -189,7 +189,9 @@
 {
   \pagenumberingnoreset{roman}
   \pagestyle{tableofcontents}
-%   \thispagestyle{onlypagenum}
+  
+  % \thispagestyle{onlypagenum}
+  \pagenumbering{gobble}
   \oldtableofcontents
   \cleardoublepage
 }
