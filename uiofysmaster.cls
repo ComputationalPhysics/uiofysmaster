@@ -131,7 +131,7 @@
 \begin{center}        % Sentrerer teksten
   % Tittel
   \ \\
-  \vspace{10mm}        
+  \vspace{10mm}             
   \LARGE
   \textsc{\@title} \\
   \small
