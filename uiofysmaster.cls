@@ -131,7 +131,7 @@
 \begin{center}        % Sentrerer teksten
   % Tittel
   \ \\
-  \vspace{10mm}          % Vertikalt mellomrom
+  \vspace{10mm}
   \LARGE
   \textsc{\@title} \\
   \small
@@ -143,40 +143,21 @@
   {\@author} \\
   \vspace{25mm}
   \Large
-%   {\bf{\textsl{THESIS}}} \\
   {\textsc{Thesis}} \\
-%   \textsl{for the degree of} \\
   {\small for the degree of} \\
   \vspace{2mm}
-  
-%   {\bf{\textsl{\degreename}}} \\
   {\textsc{\degreename}} \\
   \vspace{15mm}
-%   {\large \textsl {(\degreenameno)}}\\
-%   \vspace{5m}
-%   \ifXeTeX
     \centerline{\includegraphics[width=5cm,height=5cm]{figures/apollonseglet/Apollonseglet/UiO_Segl_cmyk.pdf}}
-%   \else
-%     \centerline{\includegraphics[width=5cm,height=5cm]{figures/apollonseglet/Apollonseglet/UiO_Segl_cmyk.eps}}
-%   \fi
   \vspace{15mm}
-  % \textsl{Avdeling for mekanikk, Matematisk institutt} \\
-%   \textsl{\facultyname} \\
   \large
   \facultyname \\
-%   \textsl{\universityname} \\
   \universityname \\
-  % Maaned, aar
   \vspace{5mm}
-  % \vspace{10mm}
   \normalsize
-%   \textsl{\@date} \\
   \@date \\
   \vspace{4mm}
   \normalsize
-  % \textsl{Mechanics Division, Department of Mathematics} \\
-%   \textsl{\facultynameno} \\
-%   \textsl{\universitynameno} \\
 \end{center}
 \clearemptydoublepage
 \restoregeometry
@@ -191,13 +172,9 @@
 {
   \pagenumberingnoreset{roman}
   \pagestyle{tableofcontents}
-  
-  % \thispagestyle{onlypagenum}
   \pagenumbering{gobble}
   \oldtableofcontents
   \cleardoublepage
 }
 \pagenumbering{arabic}
 }
-
-% \input{listings}
